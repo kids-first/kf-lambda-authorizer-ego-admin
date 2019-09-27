@@ -6,11 +6,12 @@ import pytest
 from jwt import DecodeError, ExpiredSignatureError
 
 from authorizer import PUBLIC_KEY_URL_ENV, Authorizer
+import importlib.resources as pkg_resources
+from . import resources
 
-with open('resources/jwt_rs256.pub') as f:
-    public_key = f.read()
-with open('resources/jwt_rs256.pem') as f:
-    private_key = f.read()
+
+public_key = pkg_resources.read_text(resources, 'jwt_rs256.pub')
+private_key = pkg_resources.read_text(resources, 'jwt_rs256.pem')
 
 PUBLIC_KEY_URL = 'https://my_public_key/oauth/token/public_key'
 ARN = '1234'
