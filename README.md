@@ -1,6 +1,8 @@
 Kids First Lambda Authorizer EGO Admin
 ================================
 
+[![CircleCI](https://circleci.com/gh/kids-first/kf-lambda-authorizer-ego-admin.svg?style=svg)](https://circleci.com/gh/kids-first/kf-lambda-authorizer-ego-admin)
+
 A lambda that can be used as an [Authorizer](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-use-lambda-authorizer.html) for AWS API Gateway.
 
 This lambda returns an `Allow` policy if user has role `ADMIN` : 
